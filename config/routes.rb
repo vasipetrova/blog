@@ -1,5 +1,9 @@
 Blog::Application.routes.draw do
-  resources :posts
+  resources :posts do
+  	resources :comments, :only => [:create]
+  end
+  
+	root :to => redirect("/posts")
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -55,4 +59,5 @@ Blog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
