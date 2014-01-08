@@ -1,2 +1,13 @@
 <h2><%= link_to_unless_current post.title, post %></h2>
+<div class="post_date">
+	<span class="month">
+		<%= post.created_at.strftime("%b") %> 
+	</span>
+	<span class="date">
+		<%= post.created_at.strftime("%d") %> 
+	</span>
+	<span class="year">
+		<%= post.created_at.strftime("%Y") %> 
+	</span>
+</div>
 <%= simple_format post.body %>

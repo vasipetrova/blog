@@ -1,22 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="view_mode">
+	<p id="notice"><%= notice %></p>
 
-<%= render :partial => @post %>
+	<%= render :partial => @post %>
 
-<div class="edit-privilege-links">
-	<%= link_to 'Edit', edit_post_path(@post),
-	:class => "button" %>
-	<%= link_to 'Back', posts_path,
-	:class => "button" %>
-</div>
+	<div class="edit-privilege-links">
+		<%= link_to 'Edit', edit_post_path(@post),
+		:class => "button" %>
+		<%= link_to 'Back', posts_path,
+		:class => "button" %>
+	</div>
 
-<h1>Comments</h1>
-<%= form_for [@post, Comment.new] do |f| %>
-	<p>
-		<%= f.text_area :body,
-				:value => "Enter your comment here ..."  %>
-		<%= f.submit "Add comment" %>
-</p>
-<% end %>
-<div id="comments">
-	<%= render :partial => @post.comments %>
-</div>
+	<h1>Comments</h1>
+	<%= form_for [@post, Comment.new] do |f| %>
+		<p>
+			<%= f.text_area :body,
+					:value => "Enter your comment here ..."  %>
+			<%= f.submit "Add comment" %>
+	</p>
+	<% end %>
+	<div id="comments">
+		<%= render :partial => @post.comments %>
+	</div>
+</div>	

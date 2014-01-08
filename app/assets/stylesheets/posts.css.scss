@@ -1,3 +1,37 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.view_mode .post_date
+{
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	background-color: #51ad95;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 10px;
+	
+}
+
+div.view_mode
+{
+	margin-left: 20px;
+}
+
+.view_mode .post_date .month
+{
+	display: block;
+	font-family: 'Great Vibes', cursive;
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+.view_mode .post_date .date,
+.view_mode .post_date .year
+{
+	display: block;
+	font-size: 0.5em;
+	line-height: 1.2em;
+}
