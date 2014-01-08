@@ -1,0 +1,143 @@
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	line-height: 16px;
+	text-decoration: none;
+	vertical-align: baseline;
+}
+
+ul, ol, li 
+{
+	list-style: none;
+}
+
+/* Link Styles */
+
+a
+{
+
+}
+
+a:hover
+{
+	background: transparent;
+	color: #bc4037;
+}
+
+body 
+{
+	background-color: #edede9;
+	font-family: 'Lato', 'Helvetica', 'Arial', Sans-serif;
+	font-size: 1.2em;	
+	font-weight: 300;
+	color: #636363;	
+
+}
+
+body #content
+{
+	position: relative;
+	width: 85%;
+	background-color: #FFFFFF;
+	margin: 50px auto;
+	padding: 20px;
+}
+
+h1
+{
+	font-family: 'Great Vibes', cursive;
+	font-size: 1.8em;
+	color: #bc4037;
+	line-height: 2em;
+}
+
+h2
+{
+	font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.8em;
+}
+
+h2 a
+{
+	color: #636363;
+}
+
+/* Form Element styles */
+form label
+{
+	display: block;
+	font-size: 0.7em;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+
+form input[type=text],
+form textarea
+{
+	background: #FFFFFF;
+	display: block;
+	min-width: 50%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	color: #666;
+	padding: 10px 15px;	
+	border: 1px solid #fff;
+	border-radius: 5px;
+	-moz-border-raidus: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.70);
+	-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.70);
+	-webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.70);
+}
+
+form textarea
+{
+	min-height: 100px;
+}
+
+
+
+input[type="button"], 
+input[type="submit"], 
+input[type="reset"], 
+input[type="file"]::-webkit-file-upload-button, 
+button,
+.button,
+a.button
+{
+	display: block;
+	background-color: #bc4037;
+	padding: 15px 20px;
+	text-align: center;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+
+a.button
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+button:hover,
+a.button:hover
+{
+	background-color: #dd5741;
+}
+
+.edit-privilege-links
+{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
