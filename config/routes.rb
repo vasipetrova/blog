@@ -4,6 +4,9 @@ Blog::Application.routes.draw do
   end
   
 	root :to => redirect("/posts")
+	
+	# create the /users route
+	resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
