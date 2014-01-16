@@ -73,9 +73,14 @@ class PostsController < ApplicationController
       params.require(:post).permit(:title, :body)
     end
   	
+  	# Check if the user is logged in
   	def authenticate
-  		authenticate_or_request_with_http_basic do |name, password|
-  			name == "admin" && password == "secret"
-  		end
+  		# if a session exists the user si logged in, continue
+			if session[:user_id] != nil
+				@sesssionName = User.find(session[:user_id]).email
+			# if the user isn't logged in force them to login
+			else
+				redirect_to :login
+			end  	
   	end
 end
