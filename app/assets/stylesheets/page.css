@@ -141,6 +141,11 @@ input[type="submit"][name="commit"]
 	margin-top: 20px;
 }
 
+input.button.inline
+{
+	margin-top: 3px;
+}
+
 .edit-privilege-links
 {
 	position: absolute;

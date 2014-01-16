@@ -4,8 +4,12 @@
 	<%= render :partial => @post %>
 
 	<div class="edit-privilege-links">
-		<%= link_to 'Edit', edit_post_path(@post),
-		:class => "button" %>
+		<%= 
+			# allow the user to edit the blog post only if they are the owner
+			if @post.author == current_user.id 
+				link_to 'Edit', edit_post_path(@post), :class => "button" 
+			end 
+		%>
 		<%= link_to 'Back', posts_path,
 		:class => "button" %>
 	</div>
@@ -19,7 +23,8 @@
 			<%= f.hidden_field :author, 
 					:value => current_user.id %>  
 					
-			<%= f.submit "Add comment" %>
+			<%= f.submit "Add comment",
+			     :class => "button inline" %>
 	</p>
 	<% end %>
 	<div id="comments">

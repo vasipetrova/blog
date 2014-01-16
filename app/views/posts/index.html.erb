@@ -1,6 +1,6 @@
 <h1>Blog Posts</h1>
 
-<%= render :partial => @posts %>
+<%= render :partial => @posts.sort_by { |c| c.created_at}.reverse %>
 
 <div class="edit-privilege-links">
 	<%= link_to 'New Post', new_post_path,

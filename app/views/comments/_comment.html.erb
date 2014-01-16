@@ -1,7 +1,17 @@
 <%= div_for comment do %>
 	<p>
 		<div class="timestamp">
-				<%= time_ago_in_words(comment.created_at) %> ago
+		
+				<%= 
+					# if a user is attached to a comment get the user name from the user table
+					if comment.author != nil
+						User.select(:username).where(:id => comment.author).pluck(:username).first
+					# if no user is attached to a comment show the user name as annoymous
+					else
+						"annonymous"
+					end %>
+				
+				wrote <%= time_ago_in_words(comment.created_at) %> ago
 		</div>
 		<%= comment.body %>
 	</p>
