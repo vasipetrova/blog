@@ -41,6 +41,7 @@ body
 
 }
 
+body #menu,
 body #content
 {
 	position: relative;
@@ -48,6 +49,11 @@ body #content
 	background-color: #FFFFFF;
 	margin: 50px auto;
 	padding: 20px;
+}
+
+body #content
+{
+	margin-top: 10px;
 }
 
 h1
@@ -174,4 +180,39 @@ input.button.inline
 	position: absolute;
 	top: 20px;
 	right: 20px;
+}
+
+/* Menu Styles */
+div#menu 
+{
+	background-color: #bc4037;
+	margin-bottom: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+#menu ul
+{
+	display: block;
+}
+
+
+#menu ul li
+{
+	display: inline-block;
+	font-size: 1.2em;
+	font-variant: small-caps;
+	text-transform: lowercase;	
+	padding: 10px;
+	border-right: 1px solid #dedede;
+}
+
+#menu ul li:first-child
+{
+	text-indent: -15px;
+}
+
+#menu ul li a
+{
+	color: #fefefe;
 }
