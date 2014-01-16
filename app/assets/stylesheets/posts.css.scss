@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.post
+{
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EAEAEA;
+}
+
+.view_mode .post
+{
+	border-bottom: none;
+}
+
+.post_date
+{
+	display: inline-block;
+	font-size: 0.8em;
+	border-left: 1px solid #dedede;
+	padding-left: 10px;
+}
+
 .view_mode .post_date
 {
 	display: block;
@@ -12,6 +32,7 @@
 	color: #FFFFFF;
 	text-align: center;
 	padding: 10px;
+	border: none;
 	
 }
 
@@ -34,4 +55,9 @@ div.view_mode
 	display: block;
 	font-size: 0.5em;
 	line-height: 1.2em;
+}
+
+.post_body p
+{
+	font-size: 1.2em;
 }

@@ -62,12 +62,35 @@ h2
 {
 	font-size: 1.5em;
 	font-weight: bold;
-	line-height: 1.8em;
+	line-height: 1.2em;
+	-webkit-margin-after: 0px;
+	-webkit-margin-before: 0px;	
 }
 
 h2 a
 {
 	color: #636363;
+}
+
+h3
+{
+	font-size: 0.8em;
+	font-weight: 200;
+	line-height: 1.2em;
+}
+
+h3.author
+{
+	display: inline-block;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+h3.author a
+{
+	color: #880000;
+	text-decoration: underline;
+	
 }
 
 /* Form Element styles */
