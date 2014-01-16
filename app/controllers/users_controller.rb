@@ -64,6 +64,12 @@ class UsersController < ApplicationController
 		else
 			@sesssionName = "Guest"
 		end
+	
+		if params[:id]
+			@my_posts = Post.find(:all, :conditions => {:author => params[:id]})
+		else
+			@my_posts = Post.find(:all, :conditions => {:author => current_user.id})
+		end
 	end
 	
     # Never trust parameters from the scary internet, only allow the white list through.

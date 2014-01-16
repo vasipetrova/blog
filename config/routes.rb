@@ -7,7 +7,8 @@ Blog::Application.routes.draw do
 	post '/users/login' => 'users#check_login', :as => :check_login
 	
 	get '/users/account_profile' => 'users#account_profile', :as => :account_profile
-
+	get '/users/account_profile/:id' => 'users#account_profile', :as => :user_account
+	
 	# create the /users route
 	resources :users
 
