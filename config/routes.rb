@@ -1,6 +1,7 @@
 Blog::Application.routes.draw do
   
 	# Define the custom user paths
+	get '/users/logout' => 'users#logout', :as => :logout	
 	get '/users/login' => 'users#login', :as => :login
 	post '/users/login' => 'users#check_login', :as => :check_login
 	
