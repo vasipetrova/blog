@@ -50,7 +50,14 @@ class UsersController < ApplicationController
 		end
 	end
 	
-	# User's 
+	# Logout the current user
+	def logout
+		current_user = nil
+		session[:user_id] = nil
+		redirect_to root_url, :notice => "Logged out!"
+	end
+	
+	# Get the user accoutn informaiton
 	def account_profile
 		if session[:user_id] != nil
 			@sesssionName = User.find(session[:user_id]).username
