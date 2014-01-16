@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+	has_many :comments
 	attr_accessor :password
 	
 	#before you save the password encrypt it BCrypt
@@ -21,7 +22,7 @@ class User < ActiveRecord::Base
 		# Get the user record from the database using the email as a key
 		user = User.find_by_email(email)
 		
-		# If the password is valid return the user object otherwise return an empty  object
+		# If the password is valid return the user object otherwise return an empty object
 		if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
 			user
 		else
@@ -34,6 +35,8 @@ class User < ActiveRecord::Base
 		# Get the user record from the database using the username as a key	
 		user = find_by_username(username)
 		
+		# if the user is valid and the hashed passwords math return the user object
+		#	otherwise return an empty object
 		if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
 			user
 		else

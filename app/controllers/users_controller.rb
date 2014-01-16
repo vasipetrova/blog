@@ -53,7 +53,7 @@ class UsersController < ApplicationController
 	# User's 
 	def account_profile
 		if session[:user_id] != nil
-			@sesssionName = User.find(session[:user_id]).email
+			@sesssionName = User.find(session[:user_id]).username
 		else
 			@sesssionName = "Guest"
 		end
