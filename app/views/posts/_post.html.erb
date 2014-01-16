@@ -1,13 +1,23 @@
-<h2><%= link_to_unless_current post.title, post %></h2>
-<div class="post_date">
-	<span class="month">
-		<%= post.created_at.strftime("%b") %> 
-	</span>
-	<span class="date">
-		<%= post.created_at.strftime("%d") %> 
-	</span>
-	<span class="year">
-		<%= post.created_at.strftime("%Y") %> 
-	</span>
+<div class="post">
+	<h2><%= link_to_unless_current post.title, post %></h2>
+	<h3 class="author"><%= 
+					# if the blog post was created by a logged in user print the author's name with a link to his profile
+					if post.author != nil
+						link_to	User.select(:username).where(:id => post.author).pluck(:username).first, account_profile_path(:id => post.author)
+						# if no user is attached to a comment show the user name as annoymous
+					end 
+				%>
+	</h3>
+	<div class="post_date">
+		<span class="month">
+			<%= post.created_at.strftime("%b") %> 
+		</span>
+		<span class="date">
+			<%= post.created_at.strftime("%d") %> 
+		</span>
+		<span class="year">
+			<%= post.created_at.strftime("%Y") %> 
+		</span>
+	</div>
+	<%= simple_format post.body, :class => "post_body" %>
 </div>
-<%= simple_format post.body %>
