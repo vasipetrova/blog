@@ -1,13 +1,19 @@
 Blog::Application.routes.draw do
-  resources :posts do
-  	resources :comments, :only => [:create]
-  end
   
-	root :to => redirect("/posts")
+	# Define the custom user paths
+	get '/users/login' => 'users#login', :as => :login
+	post '/users/login' => 'users#check_login', :as => :check_login
 	
+	get '/users/account_profile' => 'users#account_profile', :as => :account_profile
+
 	# create the /users route
 	resources :users
 
+	root :to => redirect("/posts")
+
+  resources :posts do
+  	resources :comments, :only => [:create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -62,5 +68,4 @@ Blog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-
 end

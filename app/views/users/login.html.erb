@@ -1,0 +1,20 @@
+<% @page_title = "Login" %>
+<div class="login-form">
+	<h1>Login</h1>
+
+	<%= form_for(:user, :url => {:controller => 'users', :action => :check_login }) do |f| %>
+	<p id="error"><%= flash[:error] %></p>
+	<p id="notice"><%= flash[:notice] %></p>	
+		<p>
+			<%= f.label 'username or email:' %><br />
+			<%= f.text_field :username %>
+		</p>
+		<p>
+			<%= f.label 'password:' %><br />
+			<%= f.password_field :password %>
+		</p>
+		<p>
+			<%= f.submit 'Sign In' %>&nbsp;&nbsp;&nbsp;
+		</p>
+	<% end %>	
+</div>

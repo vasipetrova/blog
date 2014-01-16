@@ -1,7 +1,33 @@
 <% @page_title = "Signup" %>
-<div class="Sign_Form">
+<div class="signup-form">
   <h1>Sign Up</h1>
 
-	<%= render 'form' %>
-  
+<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+	<p id="error"><%= flash[:error] %></p>
+	<p id="notice"><%= flash[:notice] %></p>
+  <% if @user.errors.any? %>
+    <ul class="errors">
+    <% for message_error in @user.errors.full_messages %>
+      <li>* <%= message_error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  	<p>
+			<%= f.label :username %>
+			<%= f.text_field :username%>
+    </p>
+    <p>
+	    <%= f.label :email %>
+  	  <%= f.text_field :email%>
+  	</p>
+    <p> 
+	    <%= f.label :password %>    
+    	<%= f.password_field :password%>
+		</p>
+    <p>
+	    <%= f.label :password_confirmation %>
+    	<%= f.password_field :password_confirmation%>
+    </p>
+    <%= f.submit :Signup %>
+  <% end %>  
 </div>
