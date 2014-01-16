@@ -15,6 +15,10 @@
 		<p>
 			<%= f.text_area :body,
 					:value => "Enter your comment here ..."  %>
+
+			<%= f.hidden_field :author, 
+					:value => current_user.id %>  
+					
 			<%= f.submit "Add comment" %>
 	</p>
 	<% end %>
