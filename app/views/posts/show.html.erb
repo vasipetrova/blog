@@ -6,7 +6,7 @@
 	<div class="edit-privilege-links">
 		<%= 
 			# allow the user to edit the blog post only if they are the owner
-			if @post.author == current_user.id 
+			if current_user && @post.author == current_user.id 
 				link_to 'Edit', edit_post_path(@post), :class => "button" 
 			end 
 		%>
@@ -21,7 +21,7 @@
 					:value => "Enter your comment here ..."  %>
 
 			<%= f.hidden_field :author, 
-					:value => current_user.id %>  
+					:value => current_user.id if current_user %>  
 					
 			<%= f.submit "Add comment",
 			     :class => "button inline" %>
