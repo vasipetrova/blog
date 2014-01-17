@@ -43,3 +43,15 @@ gem 'bcrypt-ruby', '~> 3.1.2', :require => 'bcrypt'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Use rspec-rails
+# Use Factory Girl - a replacement for fixtures
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
+end
+
+# shoulda-matchers lets us spec common Rails functionality like validation and association with less code
+group :test do
+  gem 'shoulda-matchers'
+end
