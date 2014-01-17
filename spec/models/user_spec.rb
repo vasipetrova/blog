@@ -2,7 +2,7 @@
 require "spec_helper"
 
 describe User do
-	# 
+	# check if a factory exists for the object user
 	it "has a valid factory" do
 		FactoryGirl.create(:user).should be_valid
 	end
