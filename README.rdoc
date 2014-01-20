@@ -4,9 +4,7 @@
 Simple blog application, which allows registered users to create blog posts and registered/non-registered users to comment on blog posts.
 
 == QUICK START
-	Download the blog repository ZIP (https://github.com/vasipetrova/blog/archive/master.zip)
-	<tt>
-	git clone https://github.com/vasipetrova/blog.git
+	<tt>git clone https://github.com/vasipetrova/blog.git</tt>
 	cd blog
   bundle install         # Install all the required gems (in Gemfile)
 
@@ -14,7 +12,6 @@ Simple blog application, which allows registered users to create blog posts and 
   rake            # Run tests
   rails server    # Start the server
   # Load http://localhost:3000 in your browser.
-  </tt>
   
 == DEMO 
 Demo can be found at http://107.170.8.111/
