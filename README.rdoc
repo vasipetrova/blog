@@ -29,6 +29,8 @@ To run the tests created you can run the following command: <tt> rspec -fd </tt>
 - Posts appear on the post page without reloading.
 - The home page displays a list of all posts, categorized by date.
 
+== NOTES
+
 * Ruby version
 ruby 1.8.7 
 
