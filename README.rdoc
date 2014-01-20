@@ -4,14 +4,14 @@
 Simple blog application, which allows registered users to create blog posts and registered/non-registered users to comment on blog posts.
 
 == QUICK START
-	git clone https://github.com/vasipetrova/blog.git
-	cd blog
-	bundle install         # Install all the required gems (in Gemfile)
+	<tt>git clone https://github.com/vasipetrova/blog.git</tt>
+	<tt>cd blog</tt>
+  bundle install         # Install all the required gems (in Gemfile)
 
-	rake db:migrate
-	rake            # Run tests
-	rails server    # Start the server
-
+  rake db:migrate
+  rake            # Run tests
+  rails server    # Start the server
+	
   # Load http://localhost:3000 in your browser.
 
 == DEMO 
