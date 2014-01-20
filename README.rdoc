@@ -31,11 +31,9 @@ To run the tests created you can run the following command: <tt> rspec -fd </tt>
 
 == NOTES
 
-* Ruby version
-ruby 1.8.7 
+Ruby version: ruby 1.8.7 
 
-* Rails version
-rails 4.0.2
+Rails version: rails 4.0.2
 
 
 Please feel free to use a different markup language if you do not plan to run
