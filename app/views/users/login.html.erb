@@ -2,7 +2,7 @@
 <div class="login-form">
 	<h1>Login</h1>
 
-	<%= form_for(:user, :url => {:controller => 'users', :action => :check_login }) do |f| %>
+	<%= form_for(:user, :url => {:controller => 'users', :action => :check_login, :method => :post }) do |f| %>
 	<p id="error"><%= flash[:error] %></p>
 	<p id="notice"><%= flash[:notice] %></p>	
 		<p>

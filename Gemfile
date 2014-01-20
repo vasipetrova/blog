@@ -46,9 +46,11 @@ gem 'bcrypt-ruby', '~> 3.1.2', :require => 'bcrypt'
 
 # Use rspec-rails
 # Use Factory Girl - a replacement for fixtures
+# Use capybara
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails'
+  gem 'capybara', '~> 2.2.1'
 end
 
 # shoulda-matchers lets us spec common Rails functionality like validation and association with less code
