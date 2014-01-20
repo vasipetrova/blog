@@ -21,6 +21,31 @@ Demo can be found at http://107.170.8.111/
 The rspec test framework along with capybara and Factory  Girl have been installed ( You can see this in the Gemfile).
 To run the tests created you can run the following command: <tt> rspec -fd </tt>
 
+Here's a list of the current tests that exist:
+- has a valid factory
+- is invalid without a title
+- is invalid without a body
+
+PostsController
+   - should create new post
+   - renders the index tempate
+   - should edit post body
+   - loads all of the posts into @posts
+   - responds successfully to an HTTP 200 status
+
+Comment
+-  has a valid factory
+-  is valid without an author
+
+CommentsController
+-    should create new comment
+
+User
+-  has a valid factory
+-  is invalid without a username
+-  is invalid without a email
+-  is invalid without password
+
 == PROJECT STATUS
 - Posts can be created and updated by owner.
 - Posts can be read by anyone.
