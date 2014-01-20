@@ -1,27 +1,29 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== DESCRPTON
+Simple blog application, which allows registered users to create blog posts and registered/non-registered users to comment on blog posts.
 
-Things you may want to cover:
+== DEMO 
+Demo can be found at http://107.170.8.111/
+
+== TESTING
+The rspec test framework along with capybara and Factory  Girl have been installed ( You can see this in the Gemfile).
+To run the tests created you can run the following command: <tt> rspec -fd </tt>
+
+== PROJECT STATUS
+- Posts can be created and updated by owner.
+- Posts can be read by anyone.
+- Posts can be commented on by anyone. If a logged in user comments, a link to his profile is attached.
+- Users can register and login to created posts
+- Uesr profile pages dispay posts they currently own.
+- Posts appear on the post page without reloading.
+- The home page displays a list of all posts, categorized by date.
 
 * Ruby version
+ruby 1.8.7 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Rails version
+rails 4.0.2
 
 
 Please feel free to use a different markup language if you do not plan to run
