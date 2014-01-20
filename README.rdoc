@@ -4,7 +4,6 @@
 Simple blog application, which allows registered users to create blog posts and registered/non-registered users to comment on blog posts.
 
 == QUICK START
-	Download the blog repository ZIP (https://github.com/vasipetrova/blog/archive/master.zip)
 	git clone https://github.com/vasipetrova/blog.git
 	cd blog
   bundle install         # Install all the required gems (in Gemfile)
